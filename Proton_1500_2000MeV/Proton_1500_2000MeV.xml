@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+
+<!-- Production Project -->
+
+<!DOCTYPE project [
+<!ENTITY release "v06_44_00">
+<!ENTITY file_type "data">
+<!ENTITY run_type "physics"> 
+<!ENTITY name "MCProton">
+<!ENTITY tag "datatest">
+<!ENTITY fclDir "/lariat/app/users/zwilliam/puppiesLoveSoftwareTutorials/v06_44_00_Practice/MCProduction/Proton_0_500MeV">
+<!ENTITY energy "0_500MeV">
+
+]>
+
+<project name="&name;">
+
+  <!-- Project size -->
+  <numevents>-1</numevents>
+
+  <!-- Operating System -->
+  <os>SL6</os>
+
+  <!-- Batch resources -->
+  <resource>DEDICATED,OPPORTUNISTIC</resource>
+
+  <!-- Larsoft information -->
+  <larsoft>
+    <tag>&release;</tag>
+    <qual>e14:prof</qual>
+    <local>&fclDir;/Proton_&energy;.tar</local>
+  </larsoft>
+
+
+  <stage name="proton11">
+    <fcldir>&fclDir;</fcldir>
+    <fcl>prodsingle_proton_&energy;_X1_Y1.fcl</fcl>
+    <outdir>/pnfs/lariat/scratch/users/zwilliam/Proton_&energy;/Proton_&energy;_X1_Y1</outdir>
+    <workdir>&fclDir;/xml/&tag;_filter_wordir</workdir>
+    <numjobs>50</numjobs>
+    <disk>50000000</disk>
+  </stage>
+
+
+  <stage name="proton12">
+    <fcldir>&fclDir;</fcldir>
+    <fcl>prodsingle_proton_&energy;_X1_Y2.fcl</fcl>
+    <outdir>/pnfs/lariat/scratch/users/zwilliam/Proton_&energy;/Proton_&energy;_X1_Y2</outdir>
+    <workdir>&fclDir;/xml/&tag;_filter_wordir</workdir>
+    <numjobs>50</numjobs>
+    <disk>50000000</disk>
+  </stage>
+
+
+  <stage name="proton13">
+    <fcldir>&fclDir;</fcldir>
+    <fcl>prodsingle_proton_&energy;_X1_Y3.fcl</fcl>
+    <outdir>/pnfs/lariat/scratch/users/zwilliam/Proton_&energy;/Proton_&energy;_X1_Y3</outdir>
+    <workdir>&fclDir;/xml/&tag;_filter_wordir</workdir>
+    <numjobs>50</numjobs>
+    <disk>50000000</disk>
+  </stage>
+
+
+  <stage name="proton14">
+    <fcldir>&fclDir;</fcldir>
+    <fcl>prodsingle_proton_&energy;_X1_Y4.fcl</fcl>
+    <outdir>/pnfs/lariat/scratch/users/zwilliam/Proton_&energy;/Proton_&energy;_X1_Y4</outdir>
+    <workdir>&fclDir;/xml/&tag;_filter_wordir</workdir>
+    <numjobs>50</numjobs>
+    <disk>50000000</disk>
+  </stage>
+
+
+  <stage name="proton15">
+    <fcldir>&fclDir;</fcldir>
+    <fcl>prodsingle_proton_&energy;_X1_Y5.fcl</fcl>
+    <outdir>/pnfs/lariat/scratch/users/zwilliam/Proton_&energy;/Proton_&energy;_X1_Y5</outdir>
+    <workdir>&fclDir;/xml/&tag;_filter_wordir</workdir>
+    <numjobs>50</numjobs>
+    <disk>50000000</disk>
+  </stage>
+
+
+  <stage name="proton16">
+    <fcldir>&fclDir;</fcldir>
+    <fcl>prodsingle_proton_&energy;_X1_Y6.fcl</fcl>
+    <outdir>/pnfs/lariat/scratch/users/zwilliam/Proton_&energy;/Proton_&energy;_X1_Y6</outdir>
+    <workdir>&fclDir;/xml/&tag;_filter_wordir</workdir>
+    <numjobs>50</numjobs>
+    <disk>50000000</disk>
+  </stage>
+
+
+  <stage name="proton17">
+    <fcldir>&fclDir;</fcldir>
+    <fcl>prodsingle_proton_&energy;_X1_Y7.fcl</fcl>
+    <outdir>/pnfs/lariat/scratch/users/zwilliam/Proton_&energy;/Proton_&energy;_X1_Y7</outdir>
+    <workdir>&fclDir;/xml/&tag;_filter_wordir</workdir>
+    <numjobs>50</numjobs>
+    <disk>50000000</disk>
+  </stage>
+
+
+  <stage name="proton18">
+    <fcldir>&fclDir;</fcldir>
+    <fcl>prodsingle_proton_&energy;_X1_Y8.fcl</fcl>
+    <outdir>/pnfs/lariat/scratch/users/zwilliam/Proton_&energy;/Proton_&energy;_X1_Y8</outdir>
+    <workdir>&fclDir;/xml/&tag;_filter_wordir</workdir>
+    <numjobs>50</numjobs>
+    <disk>50000000</disk>
+  </stage>
+
+
+  <stage name="proton19">
+    <fcldir>&fclDir;</fcldir>
+    <fcl>prodsingle_proton_&energy;_X1_Y9.fcl</fcl>
+    <outdir>/pnfs/lariat/scratch/users/zwilliam/Proton_&energy;/Proton_&energy;_X1_Y9</outdir>
+    <workdir>&fclDir;/xml/&tag;_filter_wordir</workdir>
+    <numjobs>50</numjobs>
+    <disk>50000000</disk>
+  </stage>
+
+
+
+
+  <stage name="anatree11">
+    <fcldir>&fclDir;</fcldir>
+    <fcl>AnaTree.fcl</fcl>
+    <outdir>/pnfs/lariat/scratch/users/zwilliam/Proton_&energy;/Anatree/Anatree_&energy;_X1_Y1</outdir>
+    <workdir>&fclDir;/xml/&tag;_filter_wordir</workdir>
+     <inputlist>/pnfs/lariat/scratch/users/zwilliam/Proton_&energy;/Proton_&energy;_X1_Y1/files.list</inputlist>
+    <numjobs>50</numjobs>
+  </stage>
+
+
+
+
+</project>
+
